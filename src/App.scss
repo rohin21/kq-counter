@@ -1,0 +1,81 @@
+$clr-red: #e52b50;
+$clr-green: #1cac78;
+$clr-blue: #00538c;
+
+$radius: 0.2rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  background-color: aliceblue;
+  color: white;
+}
+h1 {
+  font-size: 6rem;
+  background-color: $clr-blue;
+  padding: 1rem 3rem;
+  border-radius: 25%;
+  border: none;
+  box-shadow: 0px 0px 10px gray;
+  opacity: 0.7;
+}
+.button-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  margin: 3rem;
+  border: none;
+  background: #afeeee;
+  box-shadow: 0px 0px 10px gray;
+  font-weight: 200;
+  font-size: 4rem;
+  color: whitesmoke;
+  border-radius: 10%;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.7;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
+  &:hover {
+    background-color: #0093af;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.negative {
+  background-color: $clr-red;
+  animation: pulse 500ms ease-in-out;
+}
+.positive {
+  background-color: $clr-green;
+  animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
